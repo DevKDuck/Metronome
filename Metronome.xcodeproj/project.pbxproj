@@ -13,6 +13,8 @@
 		8C33A4C42B4FDC35009E9212 /* Metronome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C33A4C22B4FDC35009E9212 /* Metronome.xcdatamodeld */; };
 		8C33A4C62B4FDC3C009E9212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C33A4C52B4FDC3C009E9212 /* Assets.xcassets */; };
 		8C33A4C92B4FDC3C009E9212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C33A4C72B4FDC3C009E9212 /* LaunchScreen.storyboard */; };
+		8C33A4D22B4FE97E009E9212 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C33A4D12B4FE97E009E9212 /* SnapKit */; };
+		8C33A4D42B4FE97E009E9212 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8C33A4D32B4FE97E009E9212 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C33A4D22B4FE97E009E9212 /* SnapKit in Frameworks */,
+				8C33A4D42B4FE97E009E9212 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = Metronome;
+			packageProductDependencies = (
+				8C33A4D12B4FE97E009E9212 /* SnapKit */,
+				8C33A4D32B4FE97E009E9212 /* SnapKit-Dynamic */,
+			);
 			productName = Metronome;
 			productReference = 8C33A4B62B4FDC35009E9212 /* Metronome.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 8C33A4AD2B4FDC35009E9212;
+			packageReferences = (
+				8C33A4D02B4FE97E009E9212 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8C33A4B72B4FDC35009E9212 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -359,6 +370,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C33A4D02B4FE97E009E9212 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C33A4D12B4FE97E009E9212 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C33A4D02B4FE97E009E9212 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8C33A4D32B4FE97E009E9212 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C33A4D02B4FE97E009E9212 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8C33A4C22B4FDC35009E9212 /* Metronome.xcdatamodeld */ = {

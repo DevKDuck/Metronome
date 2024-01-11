@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: UIViewController {
     
@@ -43,8 +44,30 @@ class HomeViewController: UIViewController {
     
     lazy var playStopButton: UIButton = {
         let btn = UIButton()
+        btn.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        btn.tintColor = .white
+        btn.backgroundColor = .systemBlue
+        btn.layer.cornerRadius = 30
+        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
+    
+    func setLayoutPlayStopButton(){
+        view.addSubview(playStopButton)
+        
+        playStopButton.snp.makeConstraints({ btn in
+            btn.centerX.equalToSuperview()
+            btn.width.equalTo(view.bounds.width * 0.8)
+            btn.height.equalTo(view.bounds.height / 12)
+            btn.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
+        })
+        
+        
+    }
+    
+    func setLayoutButton(){
+        setLayoutPlayStopButton()
+    }
     
     
     //MARK: Lifecycle
@@ -54,6 +77,8 @@ class HomeViewController: UIViewController {
         setLeftNavigationItem()
         setRightNavigationItem()
         view.backgroundColor = .white
+        
+        setLayoutButton()
     }
     
     override func viewDidLoad() {
