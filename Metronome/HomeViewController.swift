@@ -9,16 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        setNavigationBarTitle()
-        setLeftNavigationItem()
-        setRightNavigationItem()
-        view.backgroundColor = .white
-    }
-    
+    //MARK: 네비게이션 바 설정
     func setNavigationBarTitle(){
         //이미지로 추후 변경
         self.navigationController?.navigationBar.isHidden = false
@@ -44,6 +35,25 @@ class HomeViewController: UIViewController {
     
     @objc func tapLeftNavigationItem(_ sender: UIButton){
         
+    }
+    
+    
+    
+    //MARK: 실행 버튼
+    
+    lazy var playStopButton: UIButton = {
+        let btn = UIButton()
+        return btn
+    }()
+    
+    
+    //MARK: Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setNavigationBarTitle()
+        setLeftNavigationItem()
+        setRightNavigationItem()
+        view.backgroundColor = .white
     }
     
     override func viewDidLoad() {
